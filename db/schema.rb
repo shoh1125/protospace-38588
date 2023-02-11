@@ -50,6 +50,12 @@ ActiveRecord::Schema.define(version: 2023_02_02_134822) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "posts", charset: "utf8", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "prototype_users", charset: "utf8", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
